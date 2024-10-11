@@ -1,0 +1,29 @@
+li {
+  color: black;
+}
+h2 {
+  text-decoration: underline; 
+}
+img {
+  border-style: solid; 
+  border-width: medium;
+}
+th {
+	display: inline;
+}
+table{
+	border-style: solid; 
+	border-width: medium;
+	border-color: black;
+}
+td{
+	border-style: solid; 
+	border-width: medium;
+	border-color: black;
+}
+p{
+	font-family: Georgia, serif;
+}
+.retour {
+	border-color: black;
+}
