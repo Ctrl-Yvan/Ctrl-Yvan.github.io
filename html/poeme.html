@@ -8,6 +8,9 @@
 			a {
 				text-align: center;
 			}
+			.retour{
+				padding-top: 50px;
+			}
 			.poeme {
 				text-align: center;
 			}
@@ -15,6 +18,7 @@
 				display: block;
 			}
 			p {
+			    font-size: 20px;
 				font-style: italic;
 			}
 			body{
@@ -35,6 +39,35 @@
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
+			.source{
+				width: max-content;
+				font-size: 30px;
+				position: relative;
+				cursor: pointer;
+				margin: 100px auto;
+				text-decoration: none;
+			}
+			.source::after{
+				content: "";
+				position: absolute;
+				bottom: -5px;
+				height: 4px;
+				width: 99%;
+				left: 0;
+				background-color: blue;
+				transition: 0,3s;
+				transition-timing-function: ease-in-out;
+				transform: scaleX(0)
+			}
+			.source:hover::after{
+				transform: scaleX(1)
+			}
+			.photo{
+			display: inline;
+			position: relative;
+			bottom: 450px;
+			right: 350px;
+			}
 		</style>
     </head>
     <body style="background-image:url('https://static.vecteezy.com/system/resources/previews/028/792/923/non_2x/close-up-of-nature-view-green-leaf-on-blurred-greenery-background-generative-ai-free-photo.jpg');">
@@ -49,8 +82,9 @@
 			<p>mais surtout de </p>
 			<p>l'expérience à </p>
 			<p>acquérir</p>
-			<a href="https://twitter.com/bestyou_youtube/status/934730682579980294">source</a>
+			<a class="source" href="https://twitter.com/bestyou_youtube/status/934730682579980294">source</a>
 			<a class= "retour" href="index.html"><img src="https://thumbs.dreamstime.com/b/back-arrow-icon-isolated-glossy-red-round-button-abstract-illustration-back-arrow-icon-glossy-red-round-button-105982536.jpg" height="50"></a>
+		    <img class="photo" src="https://media.licdn.com/dms/image/D5612AQHFb6E9Rf3kPQ/article-cover_image-shrink_720_1280/0/1656010524545?e=2147483647&v=beta&t=MAtZotZvsS17iH-Lt2XWhXM-y6gDCch-PXL4FSvdr8k" height="250">
 		</div>
     </body>
 </html>
