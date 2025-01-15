@@ -1,0 +1,212 @@
+
+<DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>annee1</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body> 
+<h2>Description de l'entreprise:</h2>
+<p class="description">L'entreprise ChassureYvan est une entreprise base a Ottawa. Nous vendons des chaussures de qualité 1ui garderonsvos pieds confortables et qui sont a un prix tres abordable.</p>
+
+  <div id="divnike">
+   	<!--Ajout de l'image de nike-->
+    <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/8ce97c97-3cb9-4e7f-86f4-6f39eef4b2b2/W+BLAZER+MID+%2777+NEXT+NATURE.png" height="100">
+	<!--Ajout du bouton select pour nike avec les nombres 1 à 10-->
+    <select id="Nike">
+	 <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+	<table class="table">
+		<!--Création d'une table pour décrire la chaussure nike-->
+		<tr>
+			<th class="table">Description</th>
+			<th class="table">Prix</th>
+		</tr>
+		<tr>
+			<td class="table">Bonne chaussure noir et blance de haute qualite</td>
+			<td class="table">60$</td>
+		</tr>
+	</table>
+	</div>
+ <div id="divsketchers">
+ 		<!--Ajout de l'image de sketchers-->
+    <img src="https://www.skechers.ca/dw/image/v2/BDCN_PRD/on/demandware.static/-/Sites-skechers-master/default/dw4ee1da0f/images/large/129611_NVBL.jpg?sw=1200" height="100">
+    <select id="Sketchers">
+		<!--Ajout du bouton select pour sketchers avec les nombres 1 à 10-->
+	 <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+	<table class="table">
+		<!--Création d'une table pour décrire la chaussure sketchers-->
+		<tr>
+			<th class="table">Description</th>
+			<th class="table">Prix</th>
+		</tr>
+		<tr>
+			<td class="table">Chaussure Sketechers, parfait pour la course de très haute qualité</td>
+			<td class="table">40$</td>
+		</tr>
+	</table>
+  </div>
+   <div id="divadidas">
+     <!--Ajout de l'image de adidas-->
+ <img src="https://m.media-amazon.com/images/I/716Inzq-uoL._AC_UY900_.jpg" height="100">
+	<!--Ajout du bouton select pour adidas avec les nombres 1 à 10-->
+    <select id="Adidas">
+	  <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+	<!--Création d'une table pour décrire la chaussure adidas-->
+	<table class="table">
+		<tr>
+			<th class="table">Description</th>
+			<th class="table">Prix</th>
+		</tr>
+		<tr>
+			<td class="table">Chaussure Adidas, dernier modèle en rabais d'haute gamme</td>
+			<td class="table">55$</td>
+		</tr>
+	</table>
+  </div>
+    <button type="button" class ="bouton" onclick="acheter('recu',[60,40,55],['Nike','Sketchers','Adidas'],)">Acheter</button>  
+
+  <div id="recu">
+    
+  </div>
+    <style>
+    /*Ajout de l'image en arrière plan pour que se soit une image continue,
+    on doit faire que l'image ne se repète pas, la mettre au centrer et faire quelle couvre tout l'arrière plan*/
+      body{
+        background-repeat: no-repeat;
+	      background-position: center;
+	      background-attachment: fixed;
+	      background-size: cover;
+        background-image: url('https://media.istockphoto.com/id/475449254/vector/seamless-background-from-images-sport-shoes.jpg?s=612x612&w=0&k=20&c=CHHb3MYczO4h-dMjLtaxoEbsftkp3RRDHLH7bG2vkZA=');
+     }
+/*Stylage de la table pour la description*/
+   .table{
+      font-style: bold;
+			border-style: solid; 
+			border-width: medium;
+			border-color: black;
+			font-family: fantasy;
+   }
+   /*Stylage du bouton acheter quand ont survole dessus, il va s'agrandir en 'ease' en 0.2 seconde et va agrandir de facteur 1.2*/
+   .bouton:hover {
+    background-color:green;
+  	transition:0.2s ease;
+    transform: scale(1.2);
+  }
+   /*Stylage du bouton acheter*/
+  .bouton {
+  	font-family:"verdana", cursive;
+	font-size:30px; color:black; 
+  	border:2px solid black;
+  	width:200px;
+  	padding:1.2rem;
+  }
+  /*Stylage du texte du recu*/
+.textrecu{
+  font-weight: bold;
+  font-size:30px;
+}
+ /*Stylage des boutons h2*/
+h2{
+  font-size:40px;
+}
+.description{
+   font-size:30px;
+   font-family: "Times New Roman", Times, serif;
+}
+   </style>
+  <script>
+function acheter(div,toutprix,idquantite){  
+  //On va ajouter le texte au div reçu donc il faut d'abord le prendre par son id
+  var afficher = document.getElementById(div)
+  //Le prix totale est le prix avant tout taxe est commence évidemment à zéro
+  var prixTotal = 0;
+    var espace = " "
+    /*toutrecu est le recu qui va être montrer à l'utilisateur,
+    on commencer par ajouter le mot recu, et le nom de la compagnie*/
+  var toutrecu = "<hr class='line'><h2>Recu</h2><hr class='line'><h2>Nom de la compagnie: Chaussure d'Yvan</h2><hr class='line'><h2>Description:"
+  toutrecu+= espace.repeat(15);
+  toutrecu+= "Prix</h2>";
+  //Cette loop est pour ajouter chaque achat
+  for (i=0;i<idquantite.length;i++){
+      //On prend premièrement la quantité
+	    var quantite = document.getElementById(idquantite[i]).value;
+		if (quantite!=0){
+		  //On fait seulement le reste du code si il y a plus de zéro de chaussure acheter car je n'ai pas besoin de faire un reçu pour 0 chaussure
+		  var prix = toutprix[i]
+		  prix = parseFloat(prix)
+		  quantite = parseFloat(quantite)
+		  total = prix * quantite
+	   	//On crée la partie du reçu pour l'élément auquel on est
+		  var recu = "<p class='textrecu'>"+idquantite[i]+" x "+quantite+" : " 
+		  recu += espace.repeat(29-idquantite[i].length)
+		  recu += +total+"<br>"+quantite +" x " + prix
+		  var text2 = String(quantite) + String(prix)
+		  recu += espace.repeat(34-text2.length)
+		  recu +="</p>";  
+		  //On ajoute le prix de l’article au prixTotale
+		  prixTotal+= total
+		  toutrecu+= recu
+	  }
+  }
+  if (prixTotal!=0){
+        //Tout ce code est seulement fais si le prix n'est pas zéro car si c'est zéro sa veut dire qu'ils/elles n'ont acheté
+	  if (prixTotal>100){
+	    //On exécute seulement se code si le prix totale est plus de 100$, parce ce qu'ils ont un rabais si il achète pour plus de 100$
+	  prixTotal = prixTotal.toFixed(2)
+	  prixTotalRabais = prixTotal * 0.90
+    prixTotaleTaxe = (prixTotalRabais * 1.13).toFixed(2)
+    taxe = (prixTotaleTaxe - prixTotalRabais).toFixed(2)
+    //On écrit le message avec le sous totale, rabais, taxe et total et aussi des espaces pour tout aligner, cette ligne en particulier 'espace.repeat(20-(String(prixTotalRabais)).length)' veut dire 20 espaces - la longeur du prix, tout les autres nombres pour les espace ont été choisi car ils étaient ce qui permettait un bon allignement
+		toutrecu += "<hr class='line'><p class='textrecu'>Sous Totale: " +espace.repeat(20)+ prixTotal +"$<br>Rabais de 10%, pour tout achat de 100$ ou plus<br>Total avec rabais: "+espace.repeat(20-(String(prixTotalRabais)).length)+prixTotalRabais+ "$<br>Taxe de vente: " +espace.repeat(19)+ taxe + "$<br>Total: "+espace.repeat(26)+  prixTotaleTaxe+"$</p>";
+	  } else {
+	    //Si le code passe par ici alors il n,y a pas de rabais donc on fait la même chose sauf sans rabais
+	    prixTotal = prixTotal.toFixed(2)
+      prixTotaleTaxe = (prixTotal * 1.13).toFixed(2)
+      taxe = (prixTotaleTaxe - prixTotal).toFixed(2)
+      //On écrit le message avec le sous totale, rabais, taxe et total et aussi des espace
+	    toutrecu += "<hr class='line'><p class='textrecu'>Sous Totale:"+espace.repeat(20)+prixTotal + "$<br>Taxe de vente:"+ espace.repeat(19)+ taxe + "$<br>Total: "+espace.repeat(26)+ prixTotaleTaxe+"$</p>";
+	  }
+  } else {
+	  toutrecu = "<p class='textrecu'>Tu n'a rien acheter</p>"
+  }
+  toutrecu = "<center><pre>"+toutrecu+"</pre></center>"
+  afficher.innerHTML = toutrecu;
+}
+</script>
+	</body>
+</html>
+
